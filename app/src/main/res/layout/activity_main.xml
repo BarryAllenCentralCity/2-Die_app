@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C3"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/shakuni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/dice1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/download" />
+
+    <ImageView
+        android:id="@+id/dice1"
+        android:layout_width="205dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toTopOf="@+id/Roll1"
+        app:layout_constraintEnd_toStartOf="@+id/dice2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shakuni"
+        app:srcCompat="@drawable/dice2" />
+
+    <ImageView
+        android:id="@+id/dice2"
+        android:layout_width="159dp"
+        android:layout_height="174dp"
+        app:layout_constraintBottom_toTopOf="@+id/Roll1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@id/dice1"
+        app:layout_constraintTop_toBottomOf="@id/shakuni"
+        app:srcCompat="@drawable/dice" />
+
+    <TextView
+        android:id="@+id/Result1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Result1"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/Roll1"
+        app:layout_constraintEnd_toStartOf="@+id/dice2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dice1" />
+
+    <TextView
+        android:id="@+id/Result2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Result2"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/Roll1"
+        app:layout_constraintStart_toStartOf="@+id/dice2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dice1" />
+
+    <Button
+        android:id="@+id/Roll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Roll2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Result1" />
+
+    <Button
+        android:id="@+id/Roll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/RollBoth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Roll1" />
+
+    <Button
+        android:id="@+id/RollBoth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="RollBoth!!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Roll2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
